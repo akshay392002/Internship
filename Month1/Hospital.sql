@@ -65,16 +65,17 @@ foreign key(insurance_id) references insurance(insurance_id));
  d.patient_id join insurance i on i.insurance_id = p.insurance_id where p.patient_id = 100;
  
  # Q4. Write necessary queries to prepare bill for the patient at the end of checkout.
- insert into bill values (100000,100,'2024-1-20', 50000);
-
+ insert into bill(patient_id,bill_date,bill_amount) values (100,'2024-1-20', 50000);
+ 
  #Q5. Write necessary queries to fetch and show data from various related tables (Joins)
- select p.*,d.doctor_id,d.reason,d.diagnosis_date, i.insurance_company, i.expiry_date,b.bill_date,b.bill_amount from patient p join 
+ select distinct concat(p.first_name," ",p.last_name) as Patient_name, concat(u.first_name," ",u.last_name) as Doctors_name, d.reason,d.diagnosis_date, i.insurance_company, i.expiry_date,b.bill_date,b.bill_amount from patient p join 
  diagnosis d on p.patient_id = d.patient_id join insurance i on i.insurance_id = p.insurance_id join 
- bill b on b.patient_id = p.patient_id where p.patient_id = 100;
+ bill b on b.patient_id = p.patient_id join users u on u.user_id = d.doctor_id where p.patient_id = 100;
  
 # Q6. Optimize repeated read operations using views/materialized views.
  create view patient_diagnosis as select concat(p.first_name," ",p.last_name) as 'Patients name', d.*, concat(u.first_name," ",u.last_name) as 'Doctors name' from diagnosis
  d join patient p on p.patient_id = d.patient_id join users u on u.user_id = d.doctor_id where p.patient_id = 100;
+ select * from patient_diagnosis;
  
  #Q7. Optimize read operations using indexing wherever required. (Create index on at least 1 table)
  create index idx_patient_id on diagnosis(patient_id);
@@ -96,7 +97,7 @@ begin
 	declare exp_date date;
     select expiry_date into exp_date from insurance where insurance.insurance_id = (select insurance_id from patient where patient_id = 
     NEW.patient_id);
-    if NEW.bill_date > exp_date then 	
+    if current_date() > exp_date then 	
      SIGNAL SQLSTATE '45000'
   SET MESSAGE_TEXT = 'Billing cannot be done for a patient with expired insurance.';
     end if;
@@ -108,4 +109,5 @@ delimiter ;
  update insurance set expiry_date = '2022-5-3' where insurance_id = 1001;
  insert into patient values (101, 'Amit', 'pawar',  '2024-8-13', 'Male', '9484768893','amitpawar@gmail.com', 1001);
  insert into diagnosis values(10001,101,10,'Fracture', '2024-3-18',30000);
- call bill_generation(100);
+ call bill_generation(101);
+ 
