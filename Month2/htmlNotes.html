@@ -1,0 +1,382 @@
+<!-- 🚴‍♂️ About HTML(Hyper Text Markup Language) 
+- Describes the structure of the web pages.
+-The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+-The <html> element is the root element of an HTML page
+-The <head> element contains meta information about the HTML page
+-The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+-The <body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+-The <h1> element defines a large heading
+-The <p> element defines a paragraph
+-An HTML element is defined by a start tag, some content, and an end tag.
+-The <!DOCTYPE> declaration is not case sensitive.
+-<h1> defines the most important heading. <h6> defines the least important heading.
+-fot links <a href="https://www.w3schools.com">This is a link</a>
+-for image <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+-The <br> tag defines a line break.
+-HTML is Not Case Sensitive.
+-All HTML elements can have attributes
+
+Attributes ⬇️
+Attributes provide additional information about elements
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"
+href,src,width,height,style,lang,title,
+-You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+-The HTML <pre> element defines preformatted text.The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+
+🚗Style
+<tagname style="property:value;">
+
+🎈Formatting elements
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Smaller text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+
+Quotations🚓
+-The HTML <blockquote> element defines a section that is quoted from another source.
+-The HTML <q> tag defines a short quotation.
+-The HTML <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+-The HTML <address> tag defines the contact information for the author/owner of a document or an article.
+-The HTML <cite> tag defines the title of a creative work(italic).
+-The HTML <bdo> tag is used to override the current text direction
+
+-In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.
+Attribures:
+background-color for background
+color for text color.
+
+
+🚕CSS(Cascading Style Sheets)
+-CSS can be added to HTML documents in 3 ways:
+
+1.Inline - by using the style attribute inside HTML elements
+2.Internal - by using a <style> element in the <head> section
+3.External - by using a <link> element to link to an external CSS file
+ <link rel="stylesheet" href="styles.css">
+
+Properties🛺
+color, font-family, font-size, border, padding(space between the text and the border),
+margin(space between the text and the border)
+
+Link🚙
+-An unvisited link is underlined and blue
+-A visited link is underlined and purple
+-An active link is underlined and red
+🍕Target attribute for link
+-The target attribute can have one of the following values:
+
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window
+
+<a href="mailto:someone@example.com">Send email</a> to open mail app
+-BOOKMARK
+Use the id attribute (id="value") to define bookmarks in a page
+Use the href attribute (href="#value") to link to the bookmark
+<h2 id="C4">Chapter 4</h2> and then <a href="#C4">Jump to Chapter 4</a>
+
+IMAGE🛻
+-The width and height attributes always define the width and height of the image in pixels.
+-Use the CSS float property to let the image float to the right or to the left of a text
+-The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+-To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property:
+background-repeat: no-repeat; //to stop image repeating when it is smaller in size
+background-attachment: fixed; //to avoid stretching
+  background-size: cover; //To cover entire element
+background-size: 100% 100%; ??to stretch image
+
+
+The HTML <picture> element allows you to display different pictures for different devices or screen sizes.
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture> 
+
+Favicon🌟
+A favicon is a small image displayed next to the page title in the browser tab. like G as google logo.
+<head>
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+Title:The <title> element adds a title to your page.
+<head>
+  <title>HTML Tutorial</title>
+</head>
+
+Table🏓:
+<table>
+  <tr> //table row
+    <th>Company</th> //table heading
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td> // table data
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+</table>
+
+border-collapse: collapse; //To avoid double borders
+
+border-radius: 10px; //for rounded corners
+
+ border-color: #96D4D4; //To color borders
+
+ text-align: left;  //to align text (left, right, center)
+
+<th colspan="2">Name</th> //single header on multiple columns and rowspan also possible
+
+<caption>Monthly savings</caption> //Name of the table on above the table 
+
+border-spacing: 30px; //To change space between table cells
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}     //Zebra selector
+
+td:nth-child(even), th:nth-child(even) {
+  background-color: #D6EEEE;
+}  // Vertical zebra stripes
+
+border-bottom: 1px solid #ddd; //Table with only horizontal dividers no verticle borders
+
+tr:hover {background-color: #D6EEEE;} //hoverable table 
+
+The <colgroup> tag must be a child of a <table> element and should be placed before any other table elements, like <thead>, <tr>, <td> etc., but after the <caption> element, if present.
+<colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+  </colgroup> //span provides number of columns in a group
+
+ <col span="3" style="visibility: collapse"> //Hides three columns
+
+
+
+ Lists🚌
+ 1.Undorderd list
+ <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:
+
+Value	Description
+disc	Sets the list item marker to a bullet (default)
+circle	Sets the list item marker to a circle
+square	Sets the list item marker to a square
+none	The list items will not be marked
+
+2.Ordered list
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+The type attribute of the <ol> tag, defines the type of the list item marker:
+
+Type	Description
+type="1"	The list items will be numbered with numbers (default)
+type="A"	The list items will be numbered with uppercase letters
+type="a"	The list items will be numbered with lowercase letters
+type="I"	The list items will be numbered with uppercase roman numbers
+type="i"	The list items will be numbered with lowercase roman numbers
+
+start attribute to provide startin number to start counting
+
+3.Description list
+<dl> //description list
+  <dt>Coffee</dt> //term to describe
+  <dd>- black hot drink</dd>  //actual description
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+Blaock and Inline🅱️
+Block elements are:
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
+
+Inline elements are:
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+
+span //To style single word in para
+
+Class🏛️
+The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+<style> .className</style>
+
+ID🆔
+The id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document.
+<style>  #idName </style>
+
+Difference : A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page. and it is case sensitive.
+
+IFRAME🖼️
+An HTML iframe is used to display a web page within a web page.
+<iframe src="url" title="description"></iframe> //here title is for screen reader
+
+Script📜
+The HTML <script> tag is used to define a client-side script. Can used to change style,attributes,
+  document.getElementById("demo").style.fontSize = "25px";
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  document.getElementById("image").src = "picture.gif";
+
+noscript🙅‍♀️
+The HTML <noscript> tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support scripts:
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+meta element🪙
+The <meta> element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings.
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+base🧢
+The <base> element specifies the base URL and/or target for all relative URLs in a page.
+
+The <base> tag must have either an href or a target attribute present, or both.
+
+There can only be one single <base> element in a document!
+<base href="https://www.w3schools.com/" target="_blank">
+
+layout elements🏚️
+<header> - Defines a header for a document or a section
+<nav> - Defines a set of navigation links
+<section> - Defines a section in a document
+<article> - Defines an independent, self-contained content
+<aside> - Defines content aside from the content (like a sidebar)
+<footer> - Defines a footer for a document or a section
+<details> - Defines additional details that the user can open and close on demand
+<summary> - Defines a heading for the <details> element
+
+There are four layout techniques
+1.CSS framework
+2.CSS float property
+3.CSS flexbox
+4.CSS grid
+
+Responsive🫳
+we can add viewport,then set width = 100%, or setting maxwidth, we can use picture element to show different pictures based on size of the screen.For text we use 'vw' as unit instead of pixel.We can use 
+media queries.
+
+Computer code💻
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p> //for keyboard input
+<p><samp>File not found.<br>Press F1 to continue</samp></p> //for program output
+
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p> //to define variable
+
+scheme://prefix.domain:port/path/filename
+
+Form📝
+The HTML <form> element is used to create an HTML form for user input:
+
+<input type="text">	Displays a single-line text input field
+<input type="radio">	Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">	Displays a submit button (for submitting the form)
+<input type="button">	Displays a clickable button
+
+The <label> tag defines a label for many form elements.
+
+-The action attribute defines the action to be performed when the form is submitted.
+<form action="/action_page.php" targer="-blank" method="get or post" autocomplete="on or off">
+
+Get:Appends data to url less secure
+post:not appends more secure
+
+The novalidate attribute is a boolean attribute.
+When present, it specifies that the form-data (input) should not be validated when submitted.
+<form action="/action_page.php" novalidate>
+
+Form elements
+<input>
+  types:
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+-The input value attribute specifies an initial value for an input field:
+-The input readonly attribute specifies that an input field is read-only.
+-The input disabled attribute specifies that an input field should be disabled.
+
+
+
+
+
+<label>
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>
+
+Video📽️
+<video src="videourl" controls></video>
+
+attributes:
+controls : add video controls like pause, play, 
+autoplay : autoplay video when page loads
+loop : repeats video when ends
+muted : mutes video by default
+poster : specifies image before video starts playing like youtube thumbnail
+width and height
+
+Audio🔉
+<audio src="url" controls></audio>
+
+attributes:
+same as above except poster
+preload=(none/metadata/auto):specifies how audio loaded when page loads
+
+ -->

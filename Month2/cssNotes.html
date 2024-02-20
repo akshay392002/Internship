@@ -1,0 +1,93 @@
+<!-- CSS(cascading style sheet)
+    **Child Selector:
+
+    suppose there is paragraph in div tag to apply style to that para we can use
+
+    div > p{color:blue}  //for this child selector it applies only if the element is direct child .
+
+
+    **Decendent selector: for child which is direct also indirect child.
+    div p{color:pink}
+
+    **Universal selector: Applies on all the elements
+    *{color:red}
+
+    **Pseudo selector: used for anchor tag
+    a:visited{color:blue}
+    a:link{}
+    a:active{}
+    a:hover{}
+
+    p:first-child{color:green;}   //apply color green on first child of parent i.e to only first paragraph.If there are two para then it applies to only first one.
+    p:last-child{color:yellow;}     //apply color yellow on last child
+
+
+    ***Box model📦
+    We can add multiple classes to one element
+    <div class="box box1"></div>
+
+    if we add some height to element lets suppose 200px so for total heigth we must add border and padding to it, but if we add "box-sizing:border-box" then total height is 200px including border and padding i.e its suppose border + padding is 5 then content height is 195. Without it only content height is 200px.
+
+    If margin of two elements collapsing then css only applies maximum margin value  between them.
+
+    font-weight:73 //use to make text bold or light
+    line-height: //space between two lines and by default is 110 to 120%
+    leeter-spacing //space between letters
+    text-transform: Capitalize(to make first letter capital) or uppercase or lowercase (for entire string)
+    text-decoration:underline;
+    text-decoration-color:; //This colors above underline
+    text-decoration-style:dotted; //dotted underline
+    text-decoration-thickness: //Thickness of underline
+    text-indent
+
+    text-overflow: (clip/ellipsis (means ...)) //If content not fits in window it either elips it or clips it
+    overflow: hidden;  //hides extra part 
+
+    word-break:break-all; //breaks the word at the end of the line
+
+    text-align:center;
+
+    *If same selector like multiple classes applying color on text then the selector which is mentioned at last in style is applied. Because last means we changed it recently.
+    Order of selectors priority:
+    inline(1000) > id(100) > class or attribute selector(like href) or pseudo class(like hover)(10) > Element selector(like h1,p)(1)) > universal(*)(0 points)
+    we can add !important to make any selector highest priority
+    p{color:blue !important}
+    h1.className = 1+10(h1+class) = 11 specificity
+
+    🚑Font size units:::
+
+    **If we want to use reponsive height or width using "vw" as a unit is a good choice. It takes viewport with into consideration.Doest't get affected when screen size changes.
+    80vw means 80% of total height
+
+    ** when we use margin:auto it will center block elements.
+
+    **em means suppose child is going to get some 20px font size then use 2em for child then it will double inherited one i.e 40px
+     
+    **rem is same but it compares to root element
+
+    **min-width,max-width : minimum or maximum width/height is set and not changes with respect to content.
+
+    **we can not put div inside p
+
+    Display property🖥️
+        display:inline //block elements displayed inline
+        Above causes problem while setting width and margin to solve this use as these not work on inline elements as block
+        display : inline-block;
+
+        display:none //removes element along with space taken
+        visibility:hidden //hides element but space is there
+
+
+    🔳Shadows and Outlines
+    box-shadow: horizontal-offset vertical-offset blur spread color inset(how much inside the block ) ;
+    text-shadow:; // to add an shadow to text
+
+    outline: width style color;
+
+    📃Styling lists
+    display: list-item; //default property for list
+    list-style-position:inside | outside; //where the marker should be placed (before|after) to apply style
+    list-style-imag:url(""); //used to image as index
+    list-style-type: "🫏";
+    list-style:none; //to remove index
+-->
