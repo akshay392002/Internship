@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --typography-desktop-caption-s: Poppins;
+
+  /* font sizes */
+  --typography-desktop-caption-s-size: 0.75rem;
+  --typography-desktop-h6-size: 1rem;
+  --typography-desktop-button-m-size: 0.875rem;
+  --typography-desktop-button-xs-size: 0.625rem;
+  --typography-desktop-h5-size: 1.25rem;
+  --typography-desktop-h4-size: 1.5rem;
+  --font-size-lgi: 1.188rem;
+  --typography-desktop-h3-size: 2rem;
+  --font-size-7xl: 1.625rem;
+  --font-size-7xs: 0.375rem;
+  --typography-desktop-h2-size: 2.5rem;
+  --typography-desktop-body-l-size: 1.125rem;
+
+  /* Colors */
+  --neutral-100: #f9f9f9;
+  --color-whitesmoke-100: #f8f8f8;
+  --neutral-200: #efefef;
+  --color-gainsboro-100: #e3e3e3;
+  --neutral-300: #d9d9d9;
+  --neutral-500: #565656;
+  --color-steelblue-100: #2e8fc4;
+  --primary-500: #07689f;
+  --neutral-white: #fff;
+  --neutral-400: #a6a6a6;
+  --neutral-black: #000;
+  --color-gray-100: rgba(0, 0, 0, 0.7);
+  --color-silver: #bfbfbf;
+  --color-darkslategray: #043e5f;
+  --state-colour-success: #4c9839;
+  --state-colour-error-light: #e5062e;
+  --state-colour-success-light: #e8f5e4;
+
+  /* Gaps */
+  --gap-0: 0rem;
+  --gap-22xl: 2.563rem;
+  --gap-xl: 1.25rem;
+  --gap-base: 1rem;
+  --gap-5xl: 1.5rem;
+  --gap-9xs: 0.25rem;
+  --gap-29xl: 3rem;
+  --gap-13xl: 2rem;
+  --gap-101xl: 7.5rem;
+  --gap-27xl: 2.875rem;
+  --gap-236xl: 15.938rem;
+  --gap-17xl: 2.25rem;
+  --gap-21xl: 2.5rem;
+  --gap-7xs: 0.375rem;
+  --gap-5xs: 0.5rem;
+  --gap-sm: 0.875rem;
+  --gap-3xs: 0.625rem;
+  --gap-43xl: 3.875rem;
+  --gap-46xl: 4.063rem;
+
+  /* Paddings */
+  --padding-7xs: 0.375rem;
+  --padding-lgi: 1.188rem;
+  --padding-xl: 1.25rem;
+  --padding-mid: 1.063rem;
+  --padding-3xl: 1.375rem;
+  --padding-12xs: 0.063rem;
+  --padding-29xl: 3rem;
+  --padding-12xl: 1.938rem;
+  --padding-5xs: 0.5rem;
+  --padding-2xs: 0.688rem;
+  --padding-9xs: 0.25rem;
+  --padding-xs: 0.75rem;
+  --padding-mini: 0.938rem;
+  --padding-base: 1rem;
+  --padding-10xs: 0.188rem;
+  --padding-8xs: 0.313rem;
+  --padding-5xl: 1.5rem;
+  --padding-41xl: 3.75rem;
+  --padding-20xl: 2.438rem;
+  --padding-2xl: 1.313rem;
+  --padding-13xl: 2rem;
+  --padding-6xl: 1.563rem;
+  --padding-4xs: 0.563rem;
+  --padding-6xs: 0.438rem;
+  --padding-14xl: 2.063rem;
+  --padding-3xs: 0.625rem;
+  --padding-lg: 1.125rem;
+  --padding-sm: 0.875rem;
+  --padding-4xl: 1.438rem;
+  --padding-11xs: 0.125rem;
+  --padding-smi: 0.813rem;
+
+  /* Border radiuses */
+  --br-5xs: 8px;
+  --br-9xs: 4px;
+  --br-7xs: 6px;
+  --br-281xl: 300px;
+  --br-11xs: 2px;
+  --br-11xl: 30px;
+  --br-31xl: 50px;
+  --br-xl: 20px;
+  --br-81xl: 100px;
+  --br-13xl: 32px;
+}
